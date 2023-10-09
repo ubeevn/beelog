@@ -1,0 +1,33 @@
+{
+    "name": "ubee/ubeelog",
+    "description": "The UBeeLog for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "UBee",
+            "email": "hi@ubee.vn"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "UBee\\UBeeLog\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "UBee\\UBeeLog\\Test\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "UBee\\UBeeLog\\ServiceProvider"
+            ],
+            "aliases": {
+                "UBeeLog": "UBee\\UBeeLog\\Facade"
+            }
+        }
+    }
+}
