@@ -11,7 +11,7 @@ class ServiceProvider extends Provider
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/logging.php','ubl');
         config(['logging.channels.telegram' => config('ubl.channels.telegram')]);
-        $with = new TelegramBotHandler(config('ubl.tele_key'), config('ubl.tele_channel'));
+        $with = new TelegramBotHandler(config('ubl.tele_key','example-key'), config('ubl.tele_channel','example-channel-id'));
         config(['logging.channels.telegram.with.handler' => $with]);
         $defaultChannels = config('logging.channels.stack.channels');
         $mergedChannels = array_merge($defaultChannels, ['telegram']);
