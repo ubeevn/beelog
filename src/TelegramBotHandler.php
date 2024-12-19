@@ -8,6 +8,6 @@ class TelegramBotHandler extends BaseHandler
 {
     public function __construct()
     {
-        parent::__construct(config('ubl.tele_key'), config('ubl.tele_channel'));
+        parent::__construct(config('ubl.tele_key','example-key'), config('ubl.tele_channel','example-chanel-id'));
     }
 }
